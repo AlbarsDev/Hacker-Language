@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Agbalumo&family=Bahiana&family=Cinzel&family=Croissant+One&family=Fuggles&family=Indie+Flower&family=Poppins:ital,wght@0,100;0,400;1,300;1,400&family=Press+Start+2P&family=Quicksand:wght@600&family=Quintessential&family=Sedgwick+Ave+Display&family=Shadows+Into+Light&family=Space+Grotesk:wght@500&family=Yellowtail&display=swap" rel="stylesheet">
+    <title>Leet speak cheat sheet</title>
+</head>
+<body>
+    
+    <div>
+        <h1 class="neon-title">
+            L33T SP34K
+         <br>
+            CH34T SH33T
+        </h1>
+    </div>
+
+    <div class="title-translator">
+        <h2>
+            LEET SPEAK TRANSLATOR
+        </h2>   
+    </div>
+    <div class="p-translator">
+        <p>
+            To put any of the above in perspective, you can use the Leet Speak Translator below to turn any text you'd like into Leet. This translator converts normal words or text into leet speak. You can even select any of the four levels. The Leet Speak Translator makes it easier to actually talk in leet to others, since you only have to copy and paste text. So go on, get your 1337 on, and start converting!
+        </p>
+    </div>
+
+    <form class="translator">
+        <textarea id="lametext" class="form-control" rows="5" placeholder="Put any normal text..."></textarea>
+        <div class="form-group center">
+            <label for="inlineRadio1" class="radio-inline">
+                <input type="radio"  id="inlineRadio1" name="nivel" value="option1">
+                Basic Leet
+            </label>
+            <label for="inlineRadio2" class="radio-inline">
+                <input type="radio" for="inlineRadio2" id="inlineRadio2" name="nivel" value="option2">
+                Intermediate Leet
+            </label>
+            <label for="inlineRadio3" class="radio-inline">
+                <input type="radio"  id="inlineRadio3" name="nivel" value="option3">
+                Advanced Leet
+            </label>
+            <textarea id="l33ttext" class="form-control" rows="5" disabled placeholder="And get l33t here..."></textarea>
+        </div>
+    </form>
+
+    <script src="./index.js"></script>
+    <script>
+        
+    const labels = document.getElementsByTagName('label');
+
+    for (let i = 0; i < labels.length; i++) {
+    labels[i].addEventListener('click', function() {
+       
+        const radios = document.getElementsByTagName('input');
+        for(let j = 0; j < radios.length; j++) {
+            if(radios[j].type === 'radio') {
+                radios[j].style.display = 'none';
+            }
+        }
+
+        const radioButton = document.getElementById(this.getAttribute('for'));
+        radioButton.style.display = 'inline-block';
+
+    
+        const texto = document.getElementById('lametext').value;
+
+    
+        let nivel;
+        switch(radioButton.id) {
+            case 'inlineRadio1':
+                nivel = 'simple';
+                break;
+            case 'inlineRadio2':
+                nivel = 'intermedio';
+                break;
+            case 'inlineRadio3':
+                nivel = 'avanzado';
+                break;
+        }
+
+        
+        const textoLeet = convertirALeet(texto, nivel);
+
+
+        document.getElementById('l33ttext').value = textoLeet;
+    });
+}
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,131 @@
+*{
+    background-image: url('./img/foto\ 8.png');
+}
+
+
+.neon-title {
+    animation: flicker 1s infinite alternate;
+    font-family: 'Press Start 2P', monospace;
+    text-transform: uppercase;
+    color: #22ee22;
+    font-size: 60px;
+    line-height: 100px;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 70px;
+    -webkit-text-stroke: 0.4px #22ee22;
+  }
+  
+  @keyframes flicker {
+    from {
+      text-shadow: 0 0 0px #22ee22;
+    }
+    to {
+      text-shadow: 0 0 0px #22ee22, 0 0 1px #22ee22, 0 0 27px #22ee22, 0 0 10px #22ee22, 0 0 0px #22ee22, 0 0 0px #22ee22, 0 0 0px #22ee22;
+    }
+  }
+
+  .title-translator {
+    color: #22ee22;
+    font-family: 'atari';
+    font-size: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 130px;
+    margin-right: 40px;
+  }
+
+  .p-translator {
+    color: #ffffff;
+    font-family: 'atari';
+    font-size: 30px;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    margin: 10px 70px 70px;
+  }
+  
+  textarea.form-control {
+    height: auto;
+  }
+
+  .form-control {
+    display: block;
+    width: 89%;
+    height: 34px;
+    padding: 14px;
+    font-size: 14px;
+    line-height: 1.42857143;
+    color: #555;
+    background-color: #fff;
+    background-image: none;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    margin: 50px 50px;
+  }
+
+  textarea {
+    font-size: 19px !important;
+  }
+
+  .form-group {
+    color: #fff;
+    margin-top: 10px;
+    margin-bottom: 15px;
+  }
+
+  .center {
+    text-align: center;
+  }
+
+  .form-group label {
+    font-family: 'atari';
+    line-height: 100%;
+    font-size: 40px;
+    margin-right: 60px;
+  }
+
+  .checkbox-inline, .radio-inline {
+    position: relative;
+    display: inline-block;
+    padding-left: 20px;
+    margin-bottom: 0;
+    font-weight: 400;
+    vertical-align: middle;
+    cursor: pointer;
+  }
+
+  input[type="radio"] {
+    appearance: none;
+    width: 15px;
+    height: 15px;
+    border: 4px solid #22ee22;
+    border-radius: 50%;
+    outline: none;
+    
+}
+
+input[type="radio"]:checked {
+    background-image: none;
+}
+
+
+  label {
+    display: inline-block;
+    max-width: 100%;
+    margin-bottom: 5px;
+    font-weight: 700;
+}
+  
+  button, input, select, textarea {
+    font-family: inherit;
+    font-size: inherit;
+    line-height: inherit;
+  }
+
+  textarea {
+    overflow: auto;
+  }
